@@ -1,0 +1,17 @@
+name: Timer
+version: '${project.version}'
+main: de.paulflohr.timer.Main
+api-version: '1.20'
+prefix: Timer
+authors: [1MinutePlease]
+description: A very customizable timer plugin
+commands:
+  start:
+    description: Start the timer
+    usage: /start
+  pause:
+    description: Stop the timer
+    usage: /pause
+  timer:
+    description: Change the settings of the timer
+    usage: /timer <setting> <value>
