@@ -4,7 +4,6 @@ import de.paulflohr.timer.util.ConfigId;
 import de.paulflohr.timer.util.TimeFormat;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.configuration.file.YamlConfiguration;
 
 public class TimerSettings {
 
@@ -17,13 +16,6 @@ public class TimerSettings {
 
     public TimerSettings(FileConfiguration config) {
         this.config = config;
-    }
-
-    public void addDefaults() {
-        config.addDefault(ConfigId.COLOR.value, ChatColor.GREEN.getChar());
-        config.addDefault(ConfigId.VISIBILITY.value, true);
-        config.addDefault(ConfigId.AUTO_RESUME.value, true);
-        config.addDefault(ConfigId.TIME_FORMAT.value, TimeFormat.Verbose.name());
     }
 
     public void load() {

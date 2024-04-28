@@ -20,10 +20,10 @@ public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
+        saveDefaultConfig();
+        getConfig().options().copyDefaults(true);
 
         settings = new TimerSettings(getConfig());
-        settings.addDefaults();
-        saveDefaultConfig();
         settings.load();
 
         timer = new Timer(getConfig().getInt(ConfigId.TIME.value, 0));

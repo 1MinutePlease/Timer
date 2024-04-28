@@ -24,6 +24,6 @@ public class PauseCommand implements CommandExecutor {
                 Main.getInstance().getSettings().getColor() + "Timer " + verb,
                 null, 10, 50, 10));
 
-        return false;
+        return true;
     }
 }
